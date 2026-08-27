@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation typeVersion="2.0" xmlns:editor="http://www.aldebaran.com/animation/editor">
+
+  <!-- Welcome gesture: gentle right arm wave + head tilt (2s = 50 frames at 25fps) -->
+
+  <!-- Right arm rises to wave position, then waves twice -->
+  <ActuatorCurve fps="25" actuator="RShoulderPitch" mute="false" unit="radian">
+    <Key value="1.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.5" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.5" frame="40">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="1.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <ActuatorCurve fps="25" actuator="RShoulderRoll" mute="false" unit="radian">
+    <Key value="-0.1" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.5" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.5" frame="40">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.1" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <!-- Right elbow bends, then waves (rotate back and forth) -->
+  <ActuatorCurve fps="25" actuator="RElbowRoll" mute="false" unit="radian">
+    <Key value="0.5" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="1.2" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.7" frame="19">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="1.2" frame="26">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.7" frame="33">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="1.2" frame="40">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.5" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <!-- Head tilts slightly to the right (friendly) -->
+  <ActuatorCurve fps="25" actuator="HeadYaw" mute="false" unit="radian">
+    <Key value="0.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.2" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="-0.2" frame="40">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <!-- Head looks slightly down at student (friendly) -->
+  <ActuatorCurve fps="25" actuator="HeadPitch" mute="false" unit="radian">
+    <Key value="0.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.1" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.1" frame="40">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <!-- Left arm stays neutral -->
+  <ActuatorCurve fps="25" actuator="LShoulderPitch" mute="false" unit="radian">
+    <Key value="1.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="1.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+</Animation>

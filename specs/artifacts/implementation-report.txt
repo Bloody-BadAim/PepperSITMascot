@@ -1,0 +1,127 @@
+Pepper SIT Mascot implementation report
+Generated: 2026-08-27
+Scope: T001 through T005, plus feasible T006 verification evidence
+
+CONTRACT
+- Read all 10 specs/*.md files before implementation.
+- specs/pipeline.json was not edited.
+- No gates were approved and no commit was created.
+- local.properties restored to Windows syntax: sdk.dir=C\:\\Users\\matin\\AppData\\Local\\Android\\Sdk
+
+T001 PROJECT IDENTITY AND BRAND RESOURCES: COMPLETE
+- Application/package: {SIT} QUEST / nl.svsit.pepperquest
+- minSdk 23, QiSDK 1.7.5
+- Local Big Shoulders Display and JetBrains Mono fonts
+- Local SIT logo and dark/gold/RGB design tokens
+- Launcher is the only exported component; backup disabled
+
+T002 QUEST ENGINE: COMPLETE
+- Pure Kotlin IDLE, TOUCH_COMBO, VOICE_CLASS, RESULT state machine
+- Head, left hand, right hand combo with progress-preserving incorrect touch
+- Four tech classes, result mapping, reset and ignored-state protection
+- 6 JUnit tests passed, 0 failed, 0 skipped
+
+T003 QISDK ADAPTER: COMPLETE BY STATIC/BUILD VERIFICATION
+- Atomic focus generation plus round epoch prevents stale queued work
+- Exact Future identity ownership for Say, Listen, LookAt and Animate
+- One single-thread executor serializes robot actions
+- Async Listen has a 9 second cancellable timeout; Say cancels Listen first
+- STOP/reset/focus loss/destroy invalidate work and cancel the owned Qi Future
+- Exact Head/Touch, LHand/Touch, RHand/Touch listener instances retained and removed off UI thread
+- Touch input is debounced and MainActivity gates it to TOUCH_COMBO
+- LookAt chooses engaged/recommended/fallback human, uses HEAD_ONLY, cancels at 4 seconds, and settles before the next serialized animation
+- No base motion, camera, network, persistence or removeAllOnStateChangedListeners
+- welcome.qianim and hyped.qianim are used; short nod.qianim is the crowded-space result fallback
+
+T004 TABLET FLOW: COMPLETE BY BUILD VERIFICATION
+- 1280x800 landscape SIT TERMINAL/GLITCH layout
+- Start, all three touch fallbacks, all four voice fallbacks and result are tablet-operable without focus
+- RESET and red STOP remain visible in every state
+- Touch targets are at least 64dp in the authored layout
+- Live mission status, progress, sensor feedback and text alternatives to color
+- Result/footer contains €10 per year, 50+ events and door studenten voor studenten
+
+T005 DOCUMENTATION: COMPLETE
+- README.md
+- docs/PEPPER-INSTALL.md
+- docs/SHOW-RUNBOOK.md
+- Covers Windows build, ADB connect/install/launch, smokecheck, STOP, reset, fallback, rollback and shutdown
+
+VERIFICATION
+Command:
+C:\Users\matin\Desktop\HvA\SIT\PepperSITMascot\tools\windows-gradle.cmd lintDebug testDebugUnitTest assembleDebug
+Result: BUILD SUCCESSFUL
+Lint: completed successfully; report at app/build/reports/lint-results-debug.html
+Final test/build rerun after last UI change: BUILD SUCCESSFUL
+Unit result: QuestEngineTest tests=6, failures=0, errors=0, skipped=0
+APK: app/build/outputs/apk/debug/app-debug.apk
+APK bytes: 79523081
+APK SHA-256 (superseded, see specs/testReport.md): 06bdac6f80fa9c62bd8aae04941656058a5363c2fe2b3239b32c932bbf2ad28a
+
+CORRECTION 2026-08-27 (parent verification)
+Two release blockers were found by a fresh reviewer after this report was written:
+1. STOP was not latched. Fixed with QuestState.SAFETY_STOP plus a controller safety latch.
+2. A rejected Qi Future was cancelled without settlement. Fixed with a bounded cancelAndSettle barrier.
+Also fixed: Listen timeout data race, missing Dutch Listen locale, duplicate class tap cancelling result
+speech, lifecycle status written off the main thread, and the merged-manifest privacy claim below.
+The permission claim in this report was based on the source manifest only. The merged manifest did
+contain INTERNET from QiSDK and an exported ProfileInstallReceiver. Both are now removed and verified
+against the built APK. Fresh evidence lives in specs/testReport.md.
+
+STATIC SAFETY SCAN OF app/src/main/java
+GoToBuilder: 0
+TakePictureBuilder: 0
+Camera APIs: 0
+OkHttp: 0
+http:// or https://: 0
+removeAllOnStateChangedListeners: 0
+raw Thread(: 0
+file/database/preferences APIs: 0
+Manifest INTERNET permission: absent in source; see CORRECTION for the merged manifest
+
+FILES IMPLEMENTED OR REPLACED
+- README.md
+- docs/PEPPER-INSTALL.md
+- docs/SHOW-RUNBOOK.md
+- app/src/main/AndroidManifest.xml
+- app/src/main/java/nl/svsit/pepperquest/QuestEngine.kt
+- app/src/main/java/nl/svsit/pepperquest/PepperController.kt
+- app/src/main/java/nl/svsit/pepperquest/MainActivity.kt
+- app/src/main/res/layout/activity_main.xml
+- app/src/main/res/values/themes.xml
+- app/src/main/res/drawable/button_gold.xml
+- app/src/main/res/drawable/button_outline.xml
+- app/src/main/res/drawable/button_stop.xml
+- app/src/main/res/drawable/class_chip.xml
+- app/src/main/res/drawable/footer_panel.xml
+- app/src/main/res/drawable/label_gold.xml
+- app/src/main/res/drawable/progress_active.xml
+- app/src/main/res/drawable/progress_done.xml
+- app/src/main/res/drawable/progress_idle.xml
+- app/src/main/res/drawable/result_card.xml
+- app/src/main/res/drawable/terminal_line.xml
+- app/src/main/res/drawable/terminal_panel.xml
+- app/src/main/res/drawable/touch_pad.xml
+- app/src/main/res/drawable/touch_pad_active.xml
+- app/src/main/res/drawable/touch_pad_done.xml
+- local.properties
+- specs/artifacts/implementation-report.txt
+
+REMOVED
+- app/src/main/java/com/cloudly/pepperupgrade/MainActivity.kt
+  Reason: legacy capability panel used forbidden base-motion/camera APIs and the wrong package/layout.
+
+EXISTING T001/T002 FILES VALIDATED AND PRESERVED
+- settings.gradle.kts
+- app/build.gradle.kts
+- app/src/main/res/values/colors.xml
+- app/src/main/res/values/strings.xml
+- app/src/main/res/font/big_shoulders_display_extra_bold.ttf
+- app/src/main/res/font/jetbrains_mono_bold.ttf
+- app/src/main/res/font/jetbrains_mono_regular.ttf
+- app/src/main/res/drawable-nodpi/sit_logo.png
+- app/src/test/java/nl/svsit/pepperquest/QuestEngineTest.kt
+
+REMAINING BLOCKERS
+- Physical Pepper validation is not possible in this environment. Tomorrow's on-robot smokecheck must confirm the three sensor callbacks, Dutch TTS locale, local PhraseSet recognition, cancellation timing and modest animation clearance.
+- No UI screenshot or instrumentation run was possible because no Android emulator or Pepper tablet was attached. Android resource compilation and lint passed.

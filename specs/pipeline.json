@@ -1,0 +1,542 @@
+{
+  "assumptions": [],
+  "blockers": [],
+  "createdAt": "2026-08-27T02:26:31Z",
+  "currentGate": "4-implement",
+  "currentTask": "T006",
+  "gates": {
+    "0-intake": {
+      "approvedAt": "2026-08-27T02:29:00Z",
+      "evidence": {
+        "businessCase": {
+          "at": "2026-08-27T02:28:56Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "15477e2a8e41e022e45e9fe2937fb38dd9773956b50fe8a55933aec0e900f01c",
+          "source": "file:specs/intake.md",
+          "status": "PASS"
+        },
+        "constitution": {
+          "at": "2026-08-27T02:28:59Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "a130da3360e2b158e13bed279cf224d9b0535c0da39928d00d45b0fdd3d00c2d",
+          "source": "file:specs/constitution.md",
+          "status": "PASS"
+        },
+        "constraints": {
+          "at": "2026-08-27T02:28:58Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "15477e2a8e41e022e45e9fe2937fb38dd9773956b50fe8a55933aec0e900f01c",
+          "source": "file:specs/intake.md",
+          "status": "PASS"
+        },
+        "intent": {
+          "at": "2026-08-27T02:28:45Z",
+          "note": "Intake en intent compass vastgelegd",
+          "sha256": "15477e2a8e41e022e45e9fe2937fb38dd9773956b50fe8a55933aec0e900f01c",
+          "source": "file:specs/intake.md",
+          "status": "PASS"
+        },
+        "users": {
+          "at": "2026-08-27T02:28:57Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "15477e2a8e41e022e45e9fe2937fb38dd9773956b50fe8a55933aec0e900f01c",
+          "source": "file:specs/intake.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "1-requirements": {
+      "approvedAt": "2026-08-27T02:29:34Z",
+      "evidence": {
+        "failureScenarios": {
+          "at": "2026-08-27T02:29:34Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "moscow": {
+          "at": "2026-08-27T02:29:02Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "nfrs": {
+          "at": "2026-08-27T02:29:34Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "outOfScope": {
+          "at": "2026-08-27T02:29:03Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "successCriteria": {
+          "at": "2026-08-27T02:29:03Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "2-design": {
+      "approvedAt": "2026-08-27T02:29:35Z",
+      "evidence": {
+        "animations": {
+          "at": "2026-08-27T02:29:09Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "aff0a24d346dc6ca5b05c9e14f5b9be5fb0319e7c0260dac6f994df1701df21f",
+          "source": "file:specs/animations.md",
+          "status": "PASS"
+        },
+        "architecture": {
+          "at": "2026-08-27T02:29:07Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "6697c2e8c6602dc01018b912c21f3fae132e894f45c3bb4f7c99c815380e2935",
+          "source": "file:specs/design.md",
+          "status": "PASS"
+        },
+        "classDiagram": {
+          "at": "2026-08-27T02:29:10Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "62077cb2eb20a5e39529818ef4e7e3d4e99ee48af942ee4e6fabc1cb8bcd5fe8",
+          "source": "file:specs/classDiagram.md",
+          "status": "PASS"
+        },
+        "componentMap": {
+          "at": "2026-08-27T02:29:10Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "e23ed1ff14507ccad8b9a9306604c7fd7c5e6f5905d12a7c17bdb30ac4df2359",
+          "source": "file:specs/componentMap.md",
+          "status": "PASS"
+        },
+        "designSystem": {
+          "at": "2026-08-27T02:29:08Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "69a96aeae63896f008e205ae6aeef8a7ca2c2657b77ba7b4ccbbcaa0e636b9cc",
+          "source": "file:specs/designSystem.md",
+          "status": "PASS"
+        },
+        "figma": {
+          "at": "2026-08-27T02:29:11Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "6697c2e8c6602dc01018b912c21f3fae132e894f45c3bb4f7c99c815380e2935",
+          "source": "file:specs/design.md",
+          "status": "PASS"
+        },
+        "intentAlignment": {
+          "at": "2026-08-27T02:29:35Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "b2cc889eaee7eab0409e2fa6c85fcf53d4b028cf3bfe9fda9caee7ea5568056a",
+          "source": "file:specs/design.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "3-tasks": {
+      "approvedAt": "2026-08-27T02:29:36Z",
+      "evidence": {
+        "dependencies": {
+          "at": "2026-08-27T02:29:12Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "f409de5fc4a2b848d3a0b860c469820eb33f08335365feba01f1e71156ab09a0",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "taskContracts": {
+          "at": "2026-08-27T02:29:36Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "testCoveragePlan": {
+          "at": "2026-08-27T02:29:36Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "traceability": {
+          "at": "2026-08-27T02:29:12Z",
+          "note": "PASS volgens one shot review",
+          "sha256": "f409de5fc4a2b848d3a0b860c469820eb33f08335365feba01f1e71156ab09a0",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "4-implement": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "IN_PROGRESS"
+    },
+    "5-test": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "PENDING"
+    },
+    "6-deploy": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "PENDING"
+    },
+    "7-content": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "PENDING"
+    },
+    "8-video": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "PENDING"
+    },
+    "9-launch": {
+      "approvedAt": null,
+      "evidence": {},
+      "status": "PENDING"
+    },
+    "analyze": {
+      "approvedAt": "2026-08-27T02:29:38Z",
+      "evidence": {
+        "boundaryOwnership": {
+          "at": "2026-08-27T02:29:37Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "counterfactualReview": {
+          "at": "2026-08-27T02:29:38Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "designCoverage": {
+          "at": "2026-08-27T02:29:37Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "requirementsCoverage": {
+          "at": "2026-08-27T02:29:36Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        },
+        "riskReview": {
+          "at": "2026-08-27T02:29:37Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "6252304701b0b6cc1fc9edfaf57fab60a619e96f49925a810c68068c5e4f5f16",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "clarify": {
+      "approvedAt": "2026-08-27T02:29:35Z",
+      "evidence": {
+        "ambiguityReview": {
+          "at": "2026-08-27T02:29:35Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "assumptionsResolved": {
+          "at": "2026-08-27T02:29:34Z",
+          "note": "PASS one shot review op detail, intent, systeem en tegenvoorbeeld",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-08-27T02:26:31Z",
+      "event": "initialized",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:28:45Z",
+      "check": "intent",
+      "event": "evidence",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:28:56Z",
+      "check": "businessCase",
+      "event": "evidence",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:28:57Z",
+      "check": "users",
+      "event": "evidence",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:28:58Z",
+      "check": "constraints",
+      "event": "evidence",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:28:59Z",
+      "check": "constitution",
+      "event": "evidence",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:29:00Z",
+      "event": "approved",
+      "gate": "0-intake"
+    },
+    {
+      "at": "2026-08-27T02:29:02Z",
+      "check": "moscow",
+      "event": "evidence",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:03Z",
+      "check": "outOfScope",
+      "event": "evidence",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:03Z",
+      "check": "successCriteria",
+      "event": "evidence",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:07Z",
+      "check": "architecture",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:08Z",
+      "check": "designSystem",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:09Z",
+      "check": "animations",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:10Z",
+      "check": "componentMap",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:10Z",
+      "check": "classDiagram",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:11Z",
+      "check": "figma",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:12Z",
+      "check": "traceability",
+      "event": "evidence",
+      "gate": "3-tasks"
+    },
+    {
+      "at": "2026-08-27T02:29:12Z",
+      "check": "dependencies",
+      "event": "evidence",
+      "gate": "3-tasks"
+    },
+    {
+      "at": "2026-08-27T02:29:34Z",
+      "check": "nfrs",
+      "event": "evidence",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:34Z",
+      "check": "failureScenarios",
+      "event": "evidence",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:34Z",
+      "event": "approved",
+      "gate": "1-requirements"
+    },
+    {
+      "at": "2026-08-27T02:29:34Z",
+      "check": "assumptionsResolved",
+      "event": "evidence",
+      "gate": "clarify"
+    },
+    {
+      "at": "2026-08-27T02:29:35Z",
+      "check": "ambiguityReview",
+      "event": "evidence",
+      "gate": "clarify"
+    },
+    {
+      "at": "2026-08-27T02:29:35Z",
+      "event": "approved",
+      "gate": "clarify"
+    },
+    {
+      "at": "2026-08-27T02:29:35Z",
+      "check": "intentAlignment",
+      "event": "evidence",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:35Z",
+      "event": "approved",
+      "gate": "2-design"
+    },
+    {
+      "at": "2026-08-27T02:29:36Z",
+      "check": "taskContracts",
+      "event": "evidence",
+      "gate": "3-tasks"
+    },
+    {
+      "at": "2026-08-27T02:29:36Z",
+      "check": "testCoveragePlan",
+      "event": "evidence",
+      "gate": "3-tasks"
+    },
+    {
+      "at": "2026-08-27T02:29:36Z",
+      "event": "approved",
+      "gate": "3-tasks"
+    },
+    {
+      "at": "2026-08-27T02:29:36Z",
+      "check": "requirementsCoverage",
+      "event": "evidence",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T02:29:37Z",
+      "check": "designCoverage",
+      "event": "evidence",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T02:29:37Z",
+      "check": "boundaryOwnership",
+      "event": "evidence",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T02:29:37Z",
+      "check": "riskReview",
+      "event": "evidence",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T02:29:38Z",
+      "check": "counterfactualReview",
+      "event": "evidence",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T02:29:38Z",
+      "event": "approved",
+      "gate": "analyze"
+    },
+    {
+      "at": "2026-08-27T05:59:19Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T001",
+      "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:20Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T002",
+      "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:20Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T003",
+      "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:20Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T004",
+      "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:20Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T005",
+      "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:20Z",
+      "event": "progress",
+      "gate": "4-implement",
+      "intentCheck": "PASS",
+      "substep": "reviewer",
+      "task": "T006",
+      "verdict": "APPROVED"
+    }
+  ],
+  "intent": {
+    "businessValue": "SIT wordt zichtbaar en memorabel als de studentgedreven tech-community van HBO-ICT",
+    "nonGoals": [
+      "Geen cloud-AI, gezichtsopslag, internetafhankelijkheid, fysieke LED-control of rijdende Pepper-basis"
+    ],
+    "outcome": "Een lokaal installeerbare Pepper Android-app levert morgen een complete 60-90 seconden SIT Quest via tablet, stem, hoofd- en handtouch en veilige robotanimaties",
+    "problem": "Eerstejaars en studiekiezers ervaren SIT nog niet als een speelse tech-community tijdens HvA Experience",
+    "users": "Aankomende eerstejaars HBO-ICT op HvA Experience en SIT-begeleiders"
+  },
+  "project": "Pepper SIT Mascot",
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-27T05:59:20Z"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animation typeVersion="2.0" xmlns:editor="http://www.aldebaran.com/animation/editor">
+
+  <!-- Nod yes: head dips down twice, returns to neutral (~2s = 50 frames at 25fps) -->
+
+  <ActuatorCurve fps="25" actuator="HeadPitch" mute="false" unit="radian">
+    <Key value="0.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.3" frame="12">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.0" frame="24">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.3" frame="36">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+  <ActuatorCurve fps="25" actuator="HeadYaw" mute="false" unit="radian">
+    <Key value="0.0" frame="1">
+      <Tangent side="right" abscissaParam="4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+    <Key value="0.0" frame="50">
+      <Tangent side="left" abscissaParam="-4.0" ordinateParam="0" editor:interpType="bezier_auto"/>
+    </Key>
+  </ActuatorCurve>
+
+</Animation>

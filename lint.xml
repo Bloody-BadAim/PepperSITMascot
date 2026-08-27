@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Single-language, fixed-copy Dutch event kiosk. No runtime locale switching. -->
+    <issue id="SetTextI18n" severity="ignore" />
+    <issue id="HardcodedText" severity="ignore" />
+
+    <!-- Pepper has one fixed 1280x800 landscape tablet and no RTL locale. -->
+    <issue id="NestedWeights" severity="ignore" />
+    <issue id="DiscouragedApi" severity="ignore" />
+    <issue id="RtlSymmetry" severity="ignore" />
+
+    <!-- Versions are intentionally pinned to the Android 6 and QiSDK 1.7.5 tested matrix. -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+    <issue id="GradleDependency" severity="ignore" />
+    <issue id="UseTomlInstead" severity="ignore" />
+</lint>

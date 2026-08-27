@@ -1,0 +1,62 @@
+<resources>
+    <style name="Base.Theme.PepperQuest" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/sit_background</item>
+        <item name="android:navigationBarColor">@color/sit_background</item>
+        <item name="android:statusBarColor">@color/sit_background</item>
+        <item name="android:colorAccent">@color/sit_gold</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_regular</item>
+        <item name="fontFamily">@font/jetbrains_mono_regular</item>
+        <item name="colorPrimary">@color/sit_gold</item>
+        <item name="colorOnPrimary">@color/sit_background</item>
+        <item name="colorSurface">@color/sit_surface</item>
+        <item name="colorOnSurface">@color/sit_text</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.PepperQuest" parent="Base.Theme.PepperQuest" />
+
+    <style name="Widget.PepperQuest.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/button_gold</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_bold</item>
+        <item name="android:textColor">@color/sit_background</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+    <style name="Widget.PepperQuest.SecondaryButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/button_outline</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_bold</item>
+        <item name="android:textColor">@color/sit_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+    <style name="Widget.PepperQuest.StopButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/button_stop</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_bold</item>
+        <item name="android:textColor">@color/sit_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+    <style name="Widget.PepperQuest.TouchPad" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/touch_pad</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_bold</item>
+        <item name="android:textColor">@color/sit_text</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+    <style name="Widget.PepperQuest.ClassChip" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/class_chip</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_bold</item>
+        <item name="android:textColor">@color/sit_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+</resources>
