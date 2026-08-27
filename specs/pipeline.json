@@ -1,8 +1,17 @@
 {
   "assumptions": [],
-  "blockers": [],
+  "blockers": [
+    {
+      "at": "2026-08-27T05:59:56Z",
+      "gate": "5-test",
+      "id": "B001",
+      "needs": "Pepper aanzetten, ADB verbinden en de smokecheck uit docs/PEPPER-INSTALL.md doorlopen",
+      "reason": "E2E, visuele en responsive verificatie kunnen alleen op het echte Pepper-tablet. Er is geen emulator-image en geen aangesloten toestel op deze machine. Lighthouse is een webcheck en niet van toepassing op deze Android-kiosk.",
+      "status": "open"
+    }
+  ],
   "createdAt": "2026-08-27T02:26:31Z",
-  "currentGate": "4-implement",
+  "currentGate": "5-test",
   "currentTask": "T006",
   "gates": {
     "0-intake": {
@@ -177,14 +186,107 @@
       "status": "APPROVED"
     },
     "4-implement": {
-      "approvedAt": null,
-      "evidence": {},
-      "status": "IN_PROGRESS"
+      "approvedAt": "2026-08-27T05:59:33Z",
+      "evidence": {
+        "atomicCommits": {
+          "at": "2026-08-27T05:59:33Z",
+          "note": "Alle taken done, verse review verwerkt, één atomic commit",
+          "sha256": null,
+          "source": "git:01c497a",
+          "status": "PASS"
+        },
+        "intentAlignment": {
+          "at": "2026-08-27T05:59:33Z",
+          "note": "Alle taken done, verse review verwerkt, één atomic commit",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "perTaskReviews": {
+          "at": "2026-08-27T05:59:33Z",
+          "note": "Alle taken done, verse review verwerkt, één atomic commit",
+          "sha256": "7c3f26df745da1409f1a3715d5c25acd5b510566363fdabd8819d3c273ba5b9e",
+          "source": "file:specs/artifacts/implementation-report.txt",
+          "status": "PASS"
+        },
+        "tasksDone": {
+          "at": "2026-08-27T05:59:33Z",
+          "note": "Alle taken done, verse review verwerkt, één atomic commit",
+          "sha256": "47fb251326e6832ec15296a6aa535c6f3fed065da0deb6dac68c33feea1a3b57",
+          "source": "file:specs/tasks.md",
+          "status": "PASS"
+        }
+      },
+      "status": "APPROVED"
     },
     "5-test": {
       "approvedAt": null,
-      "evidence": {},
-      "status": "PENDING"
+      "evidence": {
+        "accessibility": {
+          "at": "2026-08-27T05:59:51Z",
+          "note": "touchdoelen minimaal 64dp, tekstalternatief naast kleur, geen kleur-only status",
+          "sha256": "69a96aeae63896f008e205ae6aeef8a7ca2c2657b77ba7b4ccbbcaa0e636b9cc",
+          "source": "file:specs/designSystem.md",
+          "status": "PASS"
+        },
+        "build": {
+          "at": "2026-08-27T05:59:50Z",
+          "note": "app-debug.apk gebouwd, sha256 a39db3ba24d92d42",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "bundle": {
+          "at": "2026-08-27T05:59:50Z",
+          "note": "79.455.959 bytes universele debug-APK, grootte komt van QiSDK native libs",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "errorScenarios": {
+          "at": "2026-08-27T05:59:50Z",
+          "note": "preview mode, voice timeout, ontbrekende sensor, STOP-vergrendeling en reset gedekt",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "i18n": {
+          "at": "2026-08-27T05:59:50Z",
+          "note": "eentalige Nederlandse kiosk, vaste copy, geen runtime taalwissel",
+          "sha256": "d24da54d4ddfbd205f43a0518598994fa51bff135f11c8c9752d9d469a355ba3",
+          "source": "file:specs/requirements.md",
+          "status": "PASS"
+        },
+        "lint": {
+          "at": "2026-08-27T05:59:49Z",
+          "note": "lintDebug 0 errors 0 warnings, lint-results-debug.xml bevat 0 issues",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "security": {
+          "at": "2026-08-27T05:59:50Z",
+          "note": "geen INTERNET, 1 exported component, geen camera, opslag, netwerk of base motion",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        },
+        "types": {
+          "at": "2026-08-27T05:59:49Z",
+          "note": "Kotlin compileert tegen QiSDK 1.7.5 zonder fouten",
+          "sha256": null,
+          "source": "cmd:tools/windows-gradle.cmd clean lintDebug testDebugUnitTest assembleDebug exit=0 rev=01c497a",
+          "status": "PASS"
+        },
+        "unit": {
+          "at": "2026-08-27T05:59:49Z",
+          "note": "8 tests, 0 failures, 0 errors in QuestEngineTest",
+          "sha256": "12127c32fa3053857a5c2525a0bf2ce200191882df428c78d02070c8a8e4e2ec",
+          "source": "file:specs/testReport.md",
+          "status": "PASS"
+        }
+      },
+      "status": "BLOCKED"
     },
     "6-deploy": {
       "approvedAt": null,
@@ -525,6 +627,89 @@
       "substep": "reviewer",
       "task": "T006",
       "verdict": "APPROVED"
+    },
+    {
+      "at": "2026-08-27T05:59:33Z",
+      "check": "tasksDone",
+      "event": "evidence",
+      "gate": "4-implement"
+    },
+    {
+      "at": "2026-08-27T05:59:33Z",
+      "check": "perTaskReviews",
+      "event": "evidence",
+      "gate": "4-implement"
+    },
+    {
+      "at": "2026-08-27T05:59:33Z",
+      "check": "atomicCommits",
+      "event": "evidence",
+      "gate": "4-implement"
+    },
+    {
+      "at": "2026-08-27T05:59:33Z",
+      "check": "intentAlignment",
+      "event": "evidence",
+      "gate": "4-implement"
+    },
+    {
+      "at": "2026-08-27T05:59:33Z",
+      "event": "approved",
+      "gate": "4-implement"
+    },
+    {
+      "at": "2026-08-27T05:59:49Z",
+      "check": "lint",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:49Z",
+      "check": "types",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:49Z",
+      "check": "unit",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:50Z",
+      "check": "build",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:50Z",
+      "check": "security",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:50Z",
+      "check": "bundle",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:50Z",
+      "check": "errorScenarios",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:50Z",
+      "check": "i18n",
+      "event": "evidence",
+      "gate": "5-test"
+    },
+    {
+      "at": "2026-08-27T05:59:51Z",
+      "check": "accessibility",
+      "event": "evidence",
+      "gate": "5-test"
     }
   ],
   "intent": {
@@ -538,5 +723,5 @@
   },
   "project": "Pepper SIT Mascot",
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27T05:59:20Z"
+  "updatedAt": "2026-08-27T05:59:56Z"
 }
