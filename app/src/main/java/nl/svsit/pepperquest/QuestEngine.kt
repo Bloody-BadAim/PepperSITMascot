@@ -3,10 +3,10 @@ package nl.svsit.pepperquest
 enum class QuestState { IDLE, TOUCH_COMBO, VOICE_CLASS, RESULT, SAFETY_STOP }
 enum class TouchZone { HEAD, LEFT_HAND, RIGHT_HAND }
 enum class TechClass(val label: String, val spokenName: String, val resultTitle: String, val resultCopy: String) {
-    SOFTWARE("Software", "software", "CODE ARCHITECT", "Jij bouwt ideeën om tot systemen. Bij SIT vind je makers om samen mee te shippen."),
-    CYBER("Cyber Security", "cyber security", "DIGITAL GUARDIAN", "Jij ziet risico's voordat ze problemen worden. Bij SIT scherp je je skills aan met andere hackers."),
-    DESIGN("UX & Design", "design", "EXPERIENCE ENGINEER", "Jij maakt technologie helder en menselijk. Bij SIT geef je ideeën vorm met een creatieve community."),
-    GAMES("Game Development", "games", "WORLD BUILDER", "Jij combineert code, verhaal en spel. Bij SIT ontmoet je de crew voor je volgende level.")
+    SOFTWARE("Software", "software", "CODE ARCHITECT", "Jij bouwt ideeen om tot systemen. Bij SIT vind je makers om mee te shippen."),
+    CYBER("Cyber Security", "cyber security", "DIGITAL GUARDIAN", "Jij ziet risico's voor ze problemen worden. Bij SIT scherp je je skills aan."),
+    DESIGN("UX & Design", "design", "EXPERIENCE ENGINEER", "Jij maakt techniek helder en menselijk. Bij SIT geef je ideeen samen vorm."),
+    GAMES("Game Development", "games", "WORLD BUILDER", "Jij combineert code, verhaal en spel. Bij SIT vind je je volgende crew.")
 }
 
 data class QuestRenderModel(

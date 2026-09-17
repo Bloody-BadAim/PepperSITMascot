@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- QiSDK declares INTERNET transitively, but this offline app uses Binder only. -->
-    <uses-permission
-        android:name="android.permission.INTERNET"
-        tools:node="remove" />
+    <!--
+      QiSDK vereist deze permissie: libqi praat via een lokale socket met de robotservice.
+      Zonder INTERNET faalt de verbinding met "Connect error: 13: Permission denied" en
+      krijgt de app nooit robotfocus. De app zelf heeft geen enkele externe URL of client.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"

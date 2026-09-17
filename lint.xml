@@ -9,6 +9,9 @@
     <issue id="DiscouragedApi" severity="ignore" />
     <issue id="RtlSymmetry" severity="ignore" />
 
+    <!-- De donkere achtergrond staat bewust op de root zodat hij altijd wint. -->
+    <issue id="Overdraw" severity="ignore" />
+
     <!-- Versions are intentionally pinned to the Android 6 and QiSDK 1.7.5 tested matrix. -->
     <issue id="AndroidGradlePluginVersion" severity="ignore" />
     <issue id="GradleDependency" severity="ignore" />

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/sit_background"
     android:orientation="vertical"
     android:padding="24dp">
 
@@ -53,7 +54,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/resetButton"
             style="@style/Widget.PepperQuest.SecondaryButton"
             android:layout_width="132dp"
@@ -61,7 +62,7 @@
             android:layout_marginEnd="12dp"
             android:text="@string/reset" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/stopButton"
             style="@style/Widget.PepperQuest.StopButton"
             android:layout_width="148dp"
@@ -93,6 +94,20 @@
             android:orientation="vertical"
             android:paddingEnd="12dp">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/sit_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/missionLabel"
                 android:layout_width="wrap_content"
@@ -110,34 +125,37 @@
                 android:id="@+id/headline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="14dp"
                 android:fontFamily="@font/big_shoulders_display_extra_bold"
                 android:includeFontPadding="false"
                 android:letterSpacing="0.015"
-                android:lineSpacingExtra="-7dp"
+                android:lineSpacingExtra="-4dp"
                 android:text="UNLOCK
 STUDENT MODE"
                 android:textColor="@color/sit_text"
-                android:textSize="55sp" />
+                android:textSize="40sp" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
-                android:lineSpacingExtra="5dp"
+                android:lineSpacingExtra="3dp"
                 android:maxLines="4"
                 android:text="Drie korte missies. Eén community. Start de link en ontdek jouw tech class."
                 android:textColor="@color/sit_muted"
                 android:textSize="15sp" />
 
-            <Button
+        </LinearLayout>
+        </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/primaryButton"
                 style="@style/Widget.PepperQuest.PrimaryButton"
                 android:layout_width="260dp"
                 android:layout_height="68dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="14dp"
                 android:text="@string/start_quest" />
         </LinearLayout>
 
@@ -147,7 +165,7 @@ STUDENT MODE"
             android:layout_weight="1.18"
             android:background="@drawable/terminal_panel"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,8 +195,8 @@ STUDENT MODE"
             <TextView
                 android:id="@+id/feedback"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:layout_marginTop="14dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/terminal_line"
                 android:fontFamily="@font/jetbrains_mono_bold"
                 android:gravity="center_vertical"
@@ -191,7 +209,7 @@ STUDENT MODE"
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1">
 
                 <LinearLayout
@@ -244,11 +262,11 @@ STUDENT MODE"
                         android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <Button android:id="@+id/touchHead" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginEnd="8dp" android:layout_weight="1" android:text="01
+                        <androidx.appcompat.widget.AppCompatButton android:id="@+id/touchHead" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginEnd="8dp" android:layout_weight="1" android:text="01
 HEAD" />
-                        <Button android:id="@+id/touchLeft" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginHorizontal="4dp" android:layout_weight="1" android:text="02
+                        <androidx.appcompat.widget.AppCompatButton android:id="@+id/touchLeft" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginHorizontal="4dp" android:layout_weight="1" android:text="02
 L HAND" />
-                        <Button android:id="@+id/touchRight" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="8dp" android:layout_weight="1" android:text="03
+                        <androidx.appcompat.widget.AppCompatButton android:id="@+id/touchRight" style="@style/Widget.PepperQuest.TouchPad" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="8dp" android:layout_weight="1" android:text="03
 R HAND" />
                     </LinearLayout>
                 </LinearLayout>
@@ -270,12 +288,12 @@ R HAND" />
 
                     <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="10dp" android:layout_weight="1" android:orientation="vertical">
                         <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
-                            <Button android:id="@+id/classSoftware" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginEnd="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:text="SOFTWARE" />
-                            <Button android:id="@+id/classCyber" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:text="CYBER" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/classSoftware" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginEnd="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:text="SOFTWARE" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/classCyber" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:text="CYBER" />
                         </LinearLayout>
                         <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
-                            <Button android:id="@+id/classDesign" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginEnd="5dp" android:layout_weight="1" android:text="UX + DESIGN" />
-                            <Button android:id="@+id/classGames" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginStart="5dp" android:layout_weight="1" android:text="GAMES" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/classDesign" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginEnd="5dp" android:layout_weight="1" android:text="UX + DESIGN" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/classGames" style="@style/Widget.PepperQuest.ClassChip" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginStart="5dp" android:layout_weight="1" android:text="GAMES" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -285,14 +303,24 @@ R HAND" />
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/result_card"
-                    android:gravity="center_vertical"
+                    android:gravity="top"
                     android:orientation="vertical"
-                    android:padding="22dp"
+                    android:padding="16dp"
                     android:visibility="gone">
 
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/jetbrains_mono_bold" android:text="CLASS IDENTIFIED" android:textColor="@color/sit_gold" android:textSize="12sp" />
-                    <TextView android:id="@+id/resultTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="@font/big_shoulders_display_extra_bold" android:letterSpacing="0.05" android:text="CODE ARCHITECT" android:textColor="@color/sit_text" android:textSize="36sp" />
-                    <TextView android:id="@+id/resultCopy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:fontFamily="@font/jetbrains_mono_regular" android:lineSpacingExtra="4dp" android:textColor="@color/sit_muted" android:textSize="13sp" />
+                    <TextView android:id="@+id/resultTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:fontFamily="@font/big_shoulders_display_extra_bold" android:letterSpacing="0.05" android:text="CODE ARCHITECT" android:textColor="@color/sit_text" android:textSize="30sp" />
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:fillViewport="true"
+                        android:scrollbars="vertical"
+                        android:scrollbarThumbVertical="@color/sit_gold">
+
+                        <TextView android:id="@+id/resultCopy" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/jetbrains_mono_regular" android:lineSpacingExtra="2dp" android:textColor="@color/sit_muted" android:textSize="13sp" />
+                    </ScrollView>
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
