@@ -55,3 +55,7 @@ Pepper rijdt nooit. Gaze gebruikt alleen `LookAtMovementPolicy.HEAD_ONLY` en sto
 - alleen `RESET` geeft bewust een nieuwe ronde vrij
 
 Een QiSDK-actie die precies tijdens `STOP`, reset of focuswissel start, wordt geannuleerd en met een begrensde wachttijd afgerond voordat nieuw werk in dezelfde lane mag lopen.
+
+## Licentie
+
+MIT, zie [LICENSE](LICENSE). Copyright 2026 Studievereniging ICT (SIT), Hogeschool van Amsterdam.
